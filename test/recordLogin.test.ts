@@ -24,7 +24,7 @@ describe("Record Login", () => {
       .locator(
         'text=EmailPasswordLOGIN >> [placeholder="Enter registered email"]'
       )
-      .fill("cse.mayankgupta@gmail.com");
+      .fill("dummy@mail.com");
     // Press Tab
     await page
       .locator(
@@ -32,7 +32,7 @@ describe("Record Login", () => {
       )
       .press("Tab");
     // Fill [placeholder="Enter password"]
-    await page.locator('[placeholder="Enter password"]').fill("Rival.123");
+    await page.locator('[placeholder="Enter password"]').fill("password");
     // Click button:has-text("LOGIN")
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://letcode.in/' }*/),
